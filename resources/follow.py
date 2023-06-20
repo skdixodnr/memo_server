@@ -10,6 +10,7 @@ from resources.mysql_connection import get_connection
 
 class FollowResource(Resource):
 
+    # 친구 맺기
     @jwt_required()
     def post(self, followee_id):
 
@@ -35,6 +36,7 @@ class FollowResource(Resource):
 
         return {'result' : 'success'}
     
+    # 친구 끊기
     @jwt_required()
     def delete(self, followee_id):
 

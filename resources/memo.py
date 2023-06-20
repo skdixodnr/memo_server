@@ -65,6 +65,7 @@ class FollowMemoListResource(Resource):
 
 class MemoResource(Resource):
 
+    # 메모 수정
     @jwt_required()
     def put(self, memo_id):
 
@@ -93,7 +94,7 @@ class MemoResource(Resource):
 
         return {'result' : 'success'}
     
-
+    # 메모 삭제
     @jwt_required()
     def delete(self, memo_id):
 
@@ -119,6 +120,7 @@ class MemoResource(Resource):
 
 class MemoListResource(Resource):
     
+    # 메모 작성
     @jwt_required()
     def post(self) :
 
@@ -147,6 +149,7 @@ class MemoListResource(Resource):
 
         return {'result' : 'success'}
 
+    # 내 메모 리스트
     @jwt_required()
     def get(self) :
         
