@@ -54,8 +54,7 @@ class FollowResource(Resource):
         except Error as e:
             print(e)
             return {'result' : 'fail', 'error' : str(e)}, 500
-
-
+            
         return {'result' : 'success'}
     
 
